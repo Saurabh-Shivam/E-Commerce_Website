@@ -15,23 +15,37 @@ app.use('/public', express.static('public')); // for getting image
 
 app.get('/', (req, res) => {
 
-    res.sendFile(__dirname + "/home.html");
+    res.render("home");
 
 });
 
-app.get('/product', (req, res) => {
+app.get('/products', (req, res) => {
 
-    res.sendFile(__dirname + "/product.html");
+    res.render("products");
 
 });
+
 app.get('/about', (req, res) => {
 
-    res.sendFile(__dirname + "/about.html");
+    res.render("about");
 
 });
+
 app.get('/contact', (req, res) => {
 
-    res.sendFile(__dirname + "/contact.html");
+    res.render("contact");
+
+});
+
+app.get('/product2', (req, res) => {
+
+    res.render("prod2");
+
+});
+
+app.get('/product3', (req, res) => {
+
+    res.render("prod3");
 
 });
 
